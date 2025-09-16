@@ -2,8 +2,20 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  alias: {
-    '@styles': '/<rootDir>/styles',
-  },
   css: ['@/styles/main.scss'],
+  alias: {
+    '@styles': '/app/styles',
+    '@componets': '/app/components',
+    '@layout': '/app/layout',
+    '@data': '/app/data',
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "@styles/variables.scss" as *;`,
+        },
+      },
+    },
+  },
 });
