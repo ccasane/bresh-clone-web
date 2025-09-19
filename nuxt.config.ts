@@ -2,12 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  css: ['@/styles/main.scss'],
+  css: ['@/assets/styles/main.scss'],
   alias: {
-    '@styles': '/app/styles',
-    '@componets': '/app/components',
-    '@layout': '/app/layout',
-    '@data': '/app/data',
+    '@styles': '/assets/styles',
+    '@components': '/components',
+    '@layout': '/layout',
+    '@data': '/data',
   },
   vite: {
     css: {
